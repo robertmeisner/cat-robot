@@ -1,0 +1,3 @@
+[submodule "lib/useful-drivers"]
+	path = lib/useful-drivers
+	url = https://github.com/robertmeisner/useful-drivers
