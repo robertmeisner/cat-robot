@@ -6,9 +6,9 @@
  * @author Robert Meisner <robert@catchit.pl>
  * @version 1.0 2016-12-22
  */
-#include "../../lib/motor/continous_servo_motor_driver.h"
-#include "../../lib/distance/hc_sr04_distance_sensor_driver.h"
-#include "../../lib/IR/keyes_ir_remote_driver.h"
+#include "../../lib/useful-drivers/motor/continous_servo_motor_driver.h"
+#include "../../lib/useful-drivers/distance/hc_sr04_distance_sensor_driver.h"
+#include "../../lib/useful-drivers/IR/keyes_ir_remote_driver.h"
 // Pin assignment and servo declarations
 
 namespace CatRobot
