@@ -4,7 +4,7 @@
  * @author Robert Meisner <robert@catchit.pl>
  */
 
-#include "drivers/robot/robot_driver.h"
+#include "src/robot/robot_driver.h"
 int trigPin = 2;
 int echoPin = 4;
 int leftMotorPin = 9;

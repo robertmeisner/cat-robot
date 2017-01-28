@@ -6,9 +6,9 @@
  * @author Robert Meisner <robert@catchit.pl>
  * @version 1.0 2016-12-22
  */
-#include "../motor/continous_servo_motor_driver.h"
-#include "../distance/hc_sr04_distance_sensor_driver.h"
-#include "../IR/keyes_ir_remote_driver.h"
+#include "../../lib/motor/continous_servo_motor_driver.h"
+#include "../../lib/distance/hc_sr04_distance_sensor_driver.h"
+#include "../../lib/IR/keyes_ir_remote_driver.h"
 // Pin assignment and servo declarations
 
 namespace CatRobot
@@ -37,13 +37,13 @@ class Robot
         : trigPin(trigPin), echoPin(echoPin), leftMotorPin(leftMotorPin), rightMotorPin(rightMotorPin)
     {
         //create distance sensor instance
-        distanceSensor = new CatRobot::HC04DistanceSensorDriver(trigPin, echoPin, (long)maxDistance);
+        distanceSensor = new UsefulDrivers::HC04DistanceSensorDriver(trigPin, echoPin, (long)maxDistance);
         //create left motor instance
-        leftMotor = new CatRobot::ContinousServoMotorDriver(leftMotorPin);
+        leftMotor = new UsefulDrivers::ContinousServoMotorDriver(leftMotorPin);
         //create right motor instance
-        rightMotor = new CatRobot::ContinousServoMotorDriver(rightMotorPin);
+        rightMotor = new UsefulDrivers::ContinousServoMotorDriver(rightMotorPin);
         //create remote instance
-        remote = new CatRobot::KeyesIRRemoteDriver(12);
+        remote = new UsefulDrivers::KeyesIRRemoteDriver(12);
     }
     /**
     * Inits robot's components
@@ -303,9 +303,9 @@ class Robot
     int tooClose = 200;
     // components declarations
     int maxDistance = tooClose * 10;
-    CatRobot::HC04DistanceSensorDriver *distanceSensor = NULL;
-    CatRobot::ContinousServoMotorDriver *leftMotor = NULL;
-    CatRobot::ContinousServoMotorDriver *rightMotor = NULL;
-    CatRobot::KeyesIRRemoteDriver *remote = NULL;
+    UsefulDrivers::HC04DistanceSensorDriver *distanceSensor = NULL;
+    UsefulDrivers::ContinousServoMotorDriver *leftMotor = NULL;
+    UsefulDrivers::ContinousServoMotorDriver *rightMotor = NULL;
+    UsefulDrivers::KeyesIRRemoteDriver *remote = NULL;
 };
 }
